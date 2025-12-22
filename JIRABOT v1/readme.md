@@ -21,7 +21,7 @@ Before you run the bot, you need two passwords (API Keys) to allow the bot to ta
 ### 2. One-Time Setup ⚙️
 *If you haven't installed Python yet, download it here: [python.org](https://www.python.org/downloads/).*
 
-1.  Download the `jirabot.py` file to your computer (e.g., inside a folder called `JiraBot` on your Desktop).
+1.  Download the `jirabot_v1.py` file to your computer (e.g., inside a folder called `JiraBot` on your Desktop).
 2.  Open your computer's terminal:
     *   **Mac:** Press `Cmd + Space`, type "Terminal", and hit Enter.
     *   **Windows:** Press `Start`, type "cmd", and hit Enter.
