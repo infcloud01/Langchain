@@ -30,9 +30,8 @@ Before you run the bot, you need two passwords (API Keys) to allow the bot to ta
     *   **Mac:** Press `Cmd + Space`, type "Terminal", and hit Enter.
     *   **Windows:** Press `Start`, type "cmd", and hit Enter.
 3.  Copy and paste this line into the terminal and hit **Enter** to install the required "brain power":
-    ```bash
     pip install langchain langchain-openai langgraph atlassian-python-api
-    ```
+    
 
 ### 3. Run the Bot 🚀
 Every time you want to use the bot, just do this:
@@ -41,9 +40,8 @@ Every time you want to use the bot, just do this:
 2.  Type `cd` followed by the location of your folder. For example:
     *   `cd Desktop/JiraBot`
 3.  Type this command and hit Enter:
-    ```bash
     python jirabot.py
-    ```
+    
 4.  The bot will ask for your **OpenAI Key** and **Jira Token**. Paste them in (Note: *You won't see the letters appear on screen as you type them—this is for security! Just paste and hit Enter*).
 
 ### 🗣️ How to talk to JiraBot
