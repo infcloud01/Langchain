@@ -38,7 +38,7 @@ Every time you want to use the bot, just do this:
     *   `cd Desktop/JiraBot`
 3.  Type this command and hit Enter:
 ```bash
-    python jirabot.py
+    python jirabot_v1.py
 ```
     
 5.  The bot will ask for your **OpenAI Key** and **Jira Token**. Paste them in (Note: *You won't see the letters appear on screen as you type them—this is for security! Just paste and hit Enter*).
