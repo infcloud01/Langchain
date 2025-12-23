@@ -1,57 +1,117 @@
-This is a simple **Quick Start Guide** designed for a non-technical TPM who just wants to get the bot running.
+# 🤖 JiraBot: The AI Co-pilot for TPMs
 
-# 🤖 JiraBot: Quick Start Guide
+JiraBot is an open-source AI agent designed by **eXo Business Technologies** to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
 
-Welcome to JiraBot! This is your AI assistant that talks directly to Jira so you don't have to click through endless menus. It can list tickets, update statuses, change dates, and create new tasks just by chatting with it.
+Powered by **LangChain**, **LangGraph**, and **OpenAI**.
 
-Follow these 3 steps to get started.
+## 🚀 What can it do?
+*   **List Projects & Tickets:** "Show me all high priority bugs assigned to me."
+*   **Update Statuses:** "Move ticket KAN-123 to Done."
+*   **Assign Users:** "Assign KAN-123 to conrad@example.com."
+*   **Change Dates:** "Update the due date for KAN-123 to next Friday."
+*   **Add Comments:** "Add a comment to KAN-123 asking for a status update."
+*   **Create Tickets:** "Create a task to Update Documentation."
+*   **Delete Tickets:** "Delete ticket KAN-999."
 
-### 1. Get Your "Keys" 🔑
-Before you run the bot, you need two passwords (API Keys) to allow the bot to talk to the services.
+---
 
-1.  **OpenAI Key (The Brain):**
-    *   Go to [OpenAI API Keys](https://platform.openai.com/api-keys).
-    *   Click **"Create new secret key."**
-    *   Copy the code starting with `sk-...` and save it purely for a moment.
-2.  **Jira Cloud Token (The Hands):**
-    *   Go to [Atlassian Security](https://id.atlassian.com/manage-profile/security/api-tokens).
-    *   Click **"Create API token."**
-    *   Label it "JiraBot" and copy the code.
+## 📋 Prerequisites
 
-### 2. One-Time Setup ⚙️
-*If you haven't installed Python yet, download it here: [python.org](https://www.python.org/downloads/).*
+Before you start, you need **Python installed** on your computer and two specific "Keys" (passwords) to allow the bot to talk to the cloud.
 
-1.  Download the `jirabot_v1.py` file to your computer (e.g., inside a folder called `JiraBot` on your Desktop).
-2.  Open your computer's terminal:
-    *   **Mac:** Press `Cmd + Space`, type "Terminal", and hit Enter.
-    *   **Windows:** Press `Start`, type "cmd", and hit Enter.
-3.  Copy and paste this line into the terminal and hit **Enter** to install the required "brain power":
-```bash
+### 1. OpenAI API Key (The Brain)
+*   Go to [OpenAI API Keys](https://platform.openai.com/api-keys).
+*   Click **"Create new secret key."**
+*   Copy the code (starts with `sk-...`).
+
+### 2. Jira Cloud API Token (The Hands)
+*   Go to [Atlassian Security](https://id.atlassian.com/manage-profile/security/api-tokens).
+*   Click **"Create API token."**
+*   Label it "JiraBot" and copy the code.
+*   *Note: This is NOT your standard login password.*
+
+---
+
+## 🛠️ Installation
+
+1.  **Download the Code:**
+    Download the `jirabot.py` file to a folder on your computer (e.g., `Desktop/JiraBot`).
+
+2.  **Open Terminal / Command Prompt:**
+    *   **Mac:** `Cmd + Space` -> Type "Terminal"
+    *   **Windows:** `Start` -> Type "cmd"
+
+3.  **Install Requirements:**
+    Copy and paste this command into your terminal to install the necessary libraries:
+    ```bash
     pip install langchain langchain-openai langgraph atlassian-python-api
-```
-    
-### 3. Run the Bot 🚀
-Every time you want to use the bot, just do this:
+    ```
 
-1.  Open your Terminal (Mac) or Command Prompt (Windows).
-2.  Type `cd` followed by the location of your folder. For example:
-    *   `cd Desktop/JiraBot`
-3.  Type this command and hit Enter:
-```bash
-    python jirabot_v1.py
-```
-    
-5.  The bot will ask for your **OpenAI Key** and **Jira Token**. Paste them in (Note: *You won't see the letters appear on screen as you type them—this is for security! Just paste and hit Enter*).
+---
 
-### 🗣️ How to talk to JiraBot
-Once you see **"🤖 JiraBot is ready!"**, just type like you are talking to a human assistant.
+## ⚙️ Configuration: Set Your Project Key (Critical!)
 
-**Try these commands:**
-*   "List my projects."
-*   "Show me all the high priority bugs in the KAN project."
-*   "What is the status of ticket KAN-123?"
-*   "Update KAN-123 to Done."
-*   "Create a new task called 'Update Q3 Roadmap' and describe it as 'Prepare slides for leadership review'."
-*   "Change the due date for KAN-123 to next Friday."
+By default, the `jirabot.py` script is set up to work with a demo project named **"KAN"**. You likely have a different Project Key (e.g., "PROJ", "ENG", "OPS").
 
-**Type `quit` when you are done.**
+**How to find your Key:** Look at any existing ticket in your project (e.g., `ABC-123`). The letters before the hyphen (`ABC`) are your Key.
+
+**You must update the code in these 2 places:**
+
+1.  **The Brain (System Prompt):**
+    *   Open `jirabot.py` in a text editor (Notepad, TextEdit, VS Code).
+    *   Search for the function `def get_system_message():`.
+    *   Change the line: `- **Project Key:** KAN` to your actual key.
+    *   *Why?* This tells the AI which project to search by default.
+
+2.  **The Hands (Create Tool):**
+    *   Search for the function `def create_ticket`.
+    *   Change the line: `'project': {'key': 'KAN'},` to your actual key.
+    *   *Why?* This ensures new tickets are created in the correct board.
+
+---
+
+## ▶️ How to Run
+
+1.  **Navigate to your folder:**
+    In your terminal, type `cd` followed by the path to your folder.
+    ```bash
+    cd Desktop/JiraBot
+    ```
+
+2.  **Start the Bot:**
+    ```bash
+    python jirabot.py
+    ```
+
+3.  **Authenticate:**
+    The bot will ask for your **OpenAI Key** and **Jira Token**. Paste them in.
+    *   *Security Note: You won't see the text appear on screen as you paste your keys. This is normal. Just paste and hit Enter.*
+
+---
+
+## 🗣️ Example Commands
+
+Once the bot says **"🤖 JiraBot is ready!"**, try these:
+
+*   **Search:** "List all tickets in the Backlog."
+*   **Search (Advanced):** "Show me tickets assigned to me that are blocked."
+*   **Details:** "What is the latest status of PROJ-123?"
+*   **Action:** "Assign PROJ-123 to me."
+*   **Action:** "Add a comment to PROJ-55 saying 'I am working on this today'."
+*   **Action:** "Create a new Bug called 'Login Error' with description 'User cannot sign in on mobile'."
+
+---
+
+## ❓ Troubleshooting
+
+*   **"User not found" when assigning:**
+    *   Try using the user's email address instead of their name.
+    *   Ensure the user has been added to the Project in Jira Settings.
+*   **"Project not found":**
+    *   Did you update the "KAN" key in the configuration step above?
+*   **"401 Unauthorized":**
+    *   Your Jira Token or Email is incorrect. Ensure you are using the specific API Token from the Atlassian link above, not your password.
+
+---
+
+*Built with ❤️ by eXo Business Technologies.*
