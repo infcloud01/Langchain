@@ -1,6 +1,6 @@
 # 🤖 JiraBot: The AI Co-pilot for TPMs
 
-JiraBot is an open-source AI agent designed by **eXo Business Technologies** to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
+JiraBot is an open-source AI agent built by **eXo Business Technologies** to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
 
 Powered by **LangChain**, **LangGraph**, and **OpenAI**.
 
