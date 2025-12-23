@@ -1,3 +1,6 @@
+##############################################
+#Built with love by eXo Business Technologies#
+############# JIRABOT.COM ####################
 import os
 import getpass
 from datetime import datetime
@@ -341,4 +344,5 @@ def chat():
             print(f"Error: {e}")
 
 if __name__ == "__main__":
+
     chat()
