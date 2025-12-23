@@ -1,3 +1,5 @@
+This is a simple **Quick Start Guide** designed for a non-technical TPM who just wants to get the bot running.
+
 # 🤖 JiraBot: The AI Co-pilot for TPMs
 
 JiraBot is an open-source AI agent built by **eXo Business Technologies** to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
@@ -35,7 +37,7 @@ Before you start, you need **Python installed** on your computer and two specifi
 ## 🛠️ Installation
 
 1.  **Download the Code:**
-    Download the `jirabot.py` file to a folder on your computer (e.g., `Desktop/JiraBot`).
+    Download the `jirabot_v1.py` file to a folder on your computer (e.g., `Desktop/JiraBot`).
 
 2.  **Open Terminal / Command Prompt:**
     *   **Mac:** `Cmd + Space` -> Type "Terminal"
@@ -51,14 +53,14 @@ Before you start, you need **Python installed** on your computer and two specifi
 
 ## ⚙️ Configuration: Set Your Project Key (Critical!)
 
-By default, the `jirabot.py` script is set up to work with a demo project named **"KAN"**. You likely have a different Project Key (e.g., "PROJ", "ENG", "OPS").
+By default, the `jirabot_v1.py` script is set up to work with a demo project named **"KAN"**. You likely have a different Project Key (e.g., "PROJ", "ENG", "OPS").
 
 **How to find your Key:** Look at any existing ticket in your project (e.g., `ABC-123`). The letters before the hyphen (`ABC`) are your Key.
 
 **You must update the code in these 2 places:**
 
 1.  **The Brain (System Prompt):**
-    *   Open `jirabot.py` in a text editor (Notepad, TextEdit, VS Code).
+    *   Open `jirabot_v1.py` in a text editor (Notepad, TextEdit, VS Code).
     *   Search for the function `def get_system_message():`.
     *   Change the line: `- **Project Key:** KAN` to your actual key.
     *   *Why?* This tells the AI which project to search by default.
@@ -80,7 +82,7 @@ By default, the `jirabot.py` script is set up to work with a demo project named 
 
 2.  **Start the Bot:**
     ```bash
-    python jirabot.py
+    python jirabot_v1.py
     ```
 
 3.  **Authenticate:**
