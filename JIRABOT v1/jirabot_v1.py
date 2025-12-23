@@ -1,5 +1,5 @@
 ##############################################
-#Built with love by eXo Business Technologies#
+# Built with ❤️ by eXo Business Technologies #
 ############# JIRABOT.COM ####################
 import os
 import getpass
@@ -346,3 +346,4 @@ def chat():
 if __name__ == "__main__":
 
     chat()
+
