@@ -1,8 +1,10 @@
+*Built with ❤️ by eXo Business Technologies.*
+
 This is a simple **Quick Start Guide** designed for a non-technical TPM who just wants to get the bot running.
 
 # 🤖 JiraBot: The AI Co-pilot for TPMs
 
-JiraBot is an open-source AI agent built by **eXo Business Technologies** to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
+JiraBot is an open-source AI agent to help Technical Program Managers (TPMs) automate administrative overhead. Instead of clicking through endless menus, filters, and dropdowns, you can simply chat with your Jira board in plain English.
 
 Powered by **LangChain**, **LangGraph**, and **OpenAI**.
 
@@ -115,5 +117,3 @@ Once the bot says **"🤖 JiraBot is ready!"**, try these:
     *   Your Jira Token or Email is incorrect. Ensure you are using the specific API Token from the Atlassian link above, not your password.
 
 ---
-
-*Built with ❤️ by eXo Business Technologies.*
